@@ -1,0 +1,14 @@
+# Core
+torch>=2.2
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+
+# Viz / dev
+matplotlib>=3.8
+seaborn>=0.13
+
+# Apps and image parsing
+streamlit>=1.30
+opencv-python-headless>=4.9
+Pillow>=10.0
