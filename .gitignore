@@ -3,7 +3,6 @@
 src/core/__pycache__/
 src/utils/backup_model.py
 /src/core/models/
-/src/core/processed_data/
 /src/core/progressive_data/
 /src/apps/app_manual.py
 /src/apps/app_vision.py
