@@ -8,7 +8,7 @@ A machine learning system for predicting Baccarat game outcomes using 2D CNN.
 baccarat-predictor/
 ├── data/
 │   ├── raw/              # Original JSON files from games
-│   └── processed/        # CSV outcomes files (extracted from JSON)
+│   └── outcomes/        # CSV outcomes files (extracted from JSON)
 ├── models/               # Trained models and results
 │   ├── final_model.pth
 │   ├── training_history.png
@@ -19,20 +19,15 @@ baccarat-predictor/
 │   └── label_encoder.pkl
 ├── src/
 │   ├── core/             # Core ML components
-│   │   ├── baccarat_model.py
-│   │   ├── baccarat_training.py
-│   │   ├── baccarat_inference.py
-│   │   └── baccarat_data_prep.py
+│   │   ├── model.py
+│   │   ├── train.py
+│   │   ├── inference.py
+│   │   └── data_prep.py
 │   ├── apps/             # Streamlit applications
-│   │   ├── app.py
-│   │   ├── app_manual.py
-│   │   └── app_vision.py
+│   │   └── app.py    
 │   └── utils/            # Utility scripts
 │       ├── extract_baccarat_outcomes.py
 │       └── backup_model.py
-├── extract_outcomes.py   # Entry point: Extract CSV from JSON
-├── prepare_data.py       # Entry point: Prepare training data
-├── train.py              # Entry point: Train model
 └── README.md
 ```
 
@@ -45,7 +40,7 @@ python extract_outcomes.py
 ```
 
 - Reads JSON files from `data/raw/`
-- Outputs CSV files to `data/processed/`
+- Outputs CSV files to `data/outcomes/`
 
 ### 2. Prepare Training Data
 
@@ -53,7 +48,7 @@ python extract_outcomes.py
 python prepare_data.py
 ```
 
-- Reads CSV files from `data/processed/`
+- Reads CSV files from `data/outcomes/`
 - Creates training datasets in `processed_data/`
 
 ### 3. Train Model

@@ -58,7 +58,7 @@ def load_outcomes_from_json(path: Path) -> List[str]:
 
 def main():
     in_dir = Path("../../data/raw")
-    out_dir = Path("../../data/processed")
+    out_dir = Path("../../data/outcomes")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     files = sorted([p for p in in_dir.glob("*.json") if p.is_file()])

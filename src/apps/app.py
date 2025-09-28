@@ -16,7 +16,7 @@ except Exception:
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-from core.baccarat_inference import BaccaratPredictor
+from core.inference import BaccaratPredictor
 
 ROWS, COLS = 6, 24
 ROW_PIX = 64
@@ -203,3 +203,4 @@ if st.button("Predict"):
         st.write(f"Last 5: {pat['recent_distribution']['last_5_games']}")
     except Exception as e:
         st.error(f"Prediction error: {e}")
+
